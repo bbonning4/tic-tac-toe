@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    font-size: 5vmin;
+    font-size: 6vmin;
     color: lime;
 }
 
@@ -34,18 +34,25 @@ header {
 }
 
 #board > div {
-    background-color: darkgrey;
+    background: darkgrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vmin;
+    
 }
 
 #board > div:hover {
-    background-color: lightgrey;
+    background: lightgrey;
+    background: var(--div-bg-color);
 }
 
 button {
     margin-top: 4vmin;
     padding: 2vmin;
     font-size: 2vmin;
-    border-radius: 4vmin;
+    border-radius: 2vmin;
     color: grey;
 }
 
