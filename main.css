@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Tilt Neon', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkgrey;
+}
+
+header {
+    font-size: 5vmin;
+    color: lime;
+}
+
+/* h1 {
+
+} */
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 15vmin);
+    grid-template-rows: repeat(3, 15vmin);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+
+#board > div {
+    background-color: darkgrey;
+}
+
+#board > div:hover {
+    background-color: lightgrey;
+}
+
+button {
+    margin-top: 4vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 4vmin;
+    color: grey;
+}
+
+button:hover {
+    color: black;
+    background-color: lime;
+}
