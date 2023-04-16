@@ -40,17 +40,15 @@ function init() {
 function render(sqrIdx) {
     renderBoard(sqrIdx);
     renderMessage();
-    // change/disable the div:hover for divs not 0
-    // if there is a winner or 'draw'
     renderControls();
 }
 
 function placeSymbol(evt) {
-    // place turn player's symbol on div if it doesn't already have one
     const sqr = evt.target;
     const sqrIdx = sqrEl.indexOf(sqr);
     // Guard
     if(sqrIdx === -1) return;
+
     const xIdx = sqrIdx % 3;
     
     let yIdx;
@@ -92,7 +90,6 @@ function renderBoard(sqrIdx) {
 }
 
 function getWinner(x, y) {
-    //next
     return checkVerticalWin(x, y) ||
         checkHorizontalWin(x, y) ||
         checkDiagonalWin(x, y) ||
@@ -106,7 +103,7 @@ function checkVerticalWin(x, y) {
 function checkHorizontalWin(x, y) {
     return countAdjacent(x, y, 1, 0) === 2 ? board[x][y] : null;
 }
-// missing NW>SE diagonal win
+
 function checkDiagonalWin(x, y) {
     return countAdjacent(x, y, 1, 1) === 2 ||
         countAdjacent(x, y, 1, -1) === 2 ? board[x][y] : null;
